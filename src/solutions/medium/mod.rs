@@ -1,6 +1,7 @@
 pub mod add_two_numbers_2;
 pub mod container_with_most_water_11;
 pub mod four_sum_18;
+pub mod generate_parentheses_22;
 pub mod integer_to_roman_12;
 pub mod longest_palindromic_substring_5;
 pub mod reverse_integer_7;
