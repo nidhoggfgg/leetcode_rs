@@ -4,7 +4,7 @@
  * [22] Generate Parentheses
  */
 
-pub struct Solution;
+use super::Solution;
 
 // @lc code=start
 use std::collections::VecDeque;

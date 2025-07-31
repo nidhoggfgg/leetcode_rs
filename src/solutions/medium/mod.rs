@@ -1,3 +1,5 @@
+pub use crate::solutions::Solution;
+
 pub mod add_two_numbers_2;
 pub mod container_with_most_water_11;
 pub mod four_sum_18;

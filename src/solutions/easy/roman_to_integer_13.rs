@@ -4,7 +4,7 @@
  * [13] Roman to Integer
  */
 
-pub struct Solution;
+use super::Solution;
 
 // @lc code=start
 impl Solution {

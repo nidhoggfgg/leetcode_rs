@@ -4,7 +4,7 @@
  * [8] String to Integer (atoi)
  */
 
-pub struct Solution;
+use super::Solution;
 
 // TODO: ugly, maybe i should take a look of parse()
 // @lc code=start
@@ -73,7 +73,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::solutions::medium::string_to_integer_atoi_8::Solution;
+    use super::Solution;
 
     #[test]
     fn test_1() {

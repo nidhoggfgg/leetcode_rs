@@ -4,7 +4,7 @@
  * [5] Longest Palindromic Substring
  */
 
-pub struct Solution;
+use super::Solution;
 
 // @lc code=start
 impl Solution {
@@ -50,7 +50,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::solutions::medium::longest_palindromic_substring_5::Solution;
+    use super::Solution;
 
     #[test]
     fn test_1() {

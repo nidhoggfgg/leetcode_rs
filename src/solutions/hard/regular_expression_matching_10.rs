@@ -4,7 +4,7 @@
  * [10] Regular Expression Matching
  */
 
-pub struct Solution;
+use super::Solution;
 
 // @lc code=start
 impl Solution {

@@ -4,7 +4,7 @@
  * [11] Container With Most Water
  */
 
-pub struct Solution;
+use super::Solution;
 
 // @lc code=start
 impl Solution {
@@ -32,7 +32,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::solutions::medium::container_with_most_water_11::Solution;
+    use super::Solution;
 
     #[test]
     fn test_1() {

@@ -4,7 +4,7 @@
  * [9] Palindrome Number
  */
 
-pub struct Solution;
+use super::Solution;
 
 // @lc code=start
 impl Solution {
@@ -35,7 +35,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::solutions::easy::palindrome_number_9::Solution;
+    use super::Solution;
 
     #[test]
     fn test_1() {

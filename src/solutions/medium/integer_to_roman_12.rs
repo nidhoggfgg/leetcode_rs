@@ -4,7 +4,7 @@
  * [12] Integer to Roman
  */
 
-pub struct Solution;
+use super::Solution;
 
 // @lc code=start
 impl Solution {
@@ -40,7 +40,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::solutions::medium::integer_to_roman_12::Solution;
+    use super::Solution;
 
     #[test]
     fn test_1() {

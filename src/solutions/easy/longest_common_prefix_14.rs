@@ -4,7 +4,7 @@
  * [14] Longest Common Prefix
  */
 
-pub struct Solution;
+use super::Solution;
 
 // @lc code=start
 impl Solution {

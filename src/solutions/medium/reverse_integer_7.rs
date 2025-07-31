@@ -4,7 +4,7 @@
  * [7] Reverse Integer
  */
 
-pub struct Solution {}
+use super::Solution;
 
 // @lc code=start
 use std::collections::VecDeque;
@@ -43,7 +43,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::solutions::medium::reverse_integer_7::Solution;
+    use super::Solution;
 
     #[test]
     fn test_1() {

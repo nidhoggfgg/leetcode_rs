@@ -17,7 +17,8 @@ impl ListNode {
         ListNode { next: None, val }
     }
 }
-pub struct Solution;
+
+use super::Solution;
 
 // @lc code=start
 impl Solution {

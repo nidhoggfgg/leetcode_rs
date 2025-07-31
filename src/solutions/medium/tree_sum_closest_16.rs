@@ -4,7 +4,7 @@
  * [16] 3Sum Closest
  */
 
-pub struct Solution;
+use super::Solution;
 
 // @lc code=start
 impl Solution {

@@ -4,7 +4,7 @@
  * [6] Zigzag Conversion
  */
 
-pub struct Solution {}
+use super::Solution;
 
 // @lc code=start
 impl Solution {
