@@ -7,7 +7,6 @@
 pub struct Solution;
 
 // @lc code=start
-use std::collections::HashSet;
 impl Solution {
     pub fn four_sum(mut nums: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
         let target = target as i64;
@@ -16,45 +15,52 @@ impl Solution {
             return result;
         }
         nums.sort_unstable();
+        let nums: Vec<i64> = nums.into_iter().map(|x| x as i64).collect();
 
-        let mut seen = HashSet::new();
-        for l in 0..nums.len() - 3 {
-            for m1 in l + 1..nums.len() - 2 {
-                let (mut m2, mut r) = (m1 + 1, nums.len() - 1);
-                let t = target - nums[l] as i64 - nums[m1] as i64;
-                while m2 < r {
-                    let sum = (nums[m2] + nums[r]) as i64;
-                    if sum == t {
-                        let tmp = (nums[l], nums[m1], nums[m2], nums[r]);
-                        if !seen.contains(&tmp) {
-                            result.push(vec![nums[l], nums[m1], nums[m2], nums[r]]);
-                            seen.insert(tmp);
-                        }
+        let len = nums.len();
+        for i in 0..len - 3 {
+            if i > 0 && nums[i] == nums[i - 1] {
+                continue;
+            }
+            for j in i + 1..len - 2 {
+                if j > i + 1 && nums[j] == nums[j - 1] {
+                    continue;
+                }
+                let (mut l, mut r) = (j + 1, len - 1);
+                let t = target - nums[i] - nums[j];
+                let max = nums[r] + nums[r - 1];
+                let min = nums[l] + nums[l + 1];
+                if max < t || min > t {
+                    continue;
+                }
+
+                while l < r {
+                    let sum = nums[l] + nums[r];
+                    if sum < t {
+                        l += 1;
+                    } else if sum > t {
+                        r -= 1;
+                    } else {
+                        result.push(vec![
+                            nums[i] as i32,
+                            nums[j] as i32,
+                            nums[l] as i32,
+                            nums[r] as i32,
+                        ]);
 
                         // nums[m2] == .... == nums[r1]
-                        if nums[m2] == nums[r] {
+                        if nums[l] == nums[r] {
                             break;
                         }
 
                         // nums[m2] == nums[m2 + 1] == .... != some != ... nums[r]
-                        let mut left_count = 1;
-                        while m2 + left_count < r
-                            && nums[m2 + left_count - 1] == nums[m2 + left_count]
-                        {
-                            left_count += 1;
+                        while l < r && nums[l] == nums[l + 1] {
+                            l += 1;
                         }
-                        let mut right_count = 1;
-                        while r - right_count > m2 && nums[r] == nums[r - right_count] {
-                            right_count += 1;
+                        while l < r && nums[r] == nums[r - 1] {
+                            r -= 1;
                         }
-                        m2 += left_count;
-                        r -= right_count;
-
-                        continue;
-                    }
-                    if sum < t {
-                        m2 += 1;
-                    } else {
+                        l += 1;
                         r -= 1;
                     }
                 }
