@@ -2,12 +2,13 @@ pub use crate::solutions::Solution;
 
 pub mod add_two_numbers_2;
 pub mod container_with_most_water_11;
+pub mod divide_two_integers_29;
 pub mod four_sum_18;
 pub mod generate_parentheses_22;
 pub mod integer_to_roman_12;
 pub mod longest_palindromic_substring_5;
+pub mod next_permutation_31;
 pub mod reverse_integer_7;
 pub mod string_to_integer_atoi_8;
 pub mod tree_sum_closest_16;
 pub mod zigzag_conversion_6;
-pub mod divide_two_integers_29;
