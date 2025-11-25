@@ -10,6 +10,7 @@ pub mod longest_palindromic_substring_5;
 pub mod next_permutation_31;
 pub mod reverse_integer_7;
 pub mod search_in_rotated_sorted_array_33;
+pub mod smallest_integer_divisible_by_k_1015;
 pub mod string_to_integer_atoi_8;
 pub mod tree_sum_closest_16;
 pub mod zigzag_conversion_6;
