@@ -50,3 +50,4 @@ pub mod range_sum_query_2_d_immutable_304;
 pub mod corporate_flight_bookings_1109;
 pub mod car_pooling_1094;
 pub mod multiply_strings_43;
+pub mod separate_squares_i_3453;
