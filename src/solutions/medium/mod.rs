@@ -14,3 +14,4 @@ pub mod smallest_integer_divisible_by_k_1015;
 pub mod string_to_integer_atoi_8;
 pub mod tree_sum_closest_16;
 pub mod zigzag_conversion_6;
+pub mod minimum_size_subarray_sum_209;
