@@ -17,3 +17,4 @@ pub mod zigzag_conversion_6;
 pub mod minimum_size_subarray_sum_209;
 pub mod spiral_matrix_ii_59;
 pub mod design_linked_list_707;
+pub mod swap_nodes_in_pairs_24;
