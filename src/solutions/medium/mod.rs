@@ -18,3 +18,4 @@ pub mod minimum_size_subarray_sum_209;
 pub mod spiral_matrix_ii_59;
 pub mod design_linked_list_707;
 pub mod swap_nodes_in_pairs_24;
+pub mod remove_nth_node_from_end_of_list_19;
