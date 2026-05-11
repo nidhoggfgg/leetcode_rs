@@ -13,3 +13,4 @@ pub mod reverse_linked_list_206;
 pub mod valid_anagram_242;
 pub mod intersection_of_two_arrays_349;
 pub mod happy_number_202;
+pub mod two_sum_1;
