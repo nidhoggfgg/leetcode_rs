@@ -11,3 +11,4 @@ pub mod squares_of_a_sorted_array_977;
 pub mod remove_linked_list_elements_203;
 pub mod reverse_linked_list_206;
 pub mod valid_anagram_242;
+pub mod intersection_of_two_arrays_349;
