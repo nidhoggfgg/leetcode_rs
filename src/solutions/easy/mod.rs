@@ -17,3 +17,4 @@ pub mod two_sum_1;
 pub mod ransom_note_383;
 pub mod reverse_string_344;
 pub mod reverse_string_ii_541;
+pub mod separate_the_digits_in_an_array_2553;
