@@ -21,3 +21,4 @@ pub mod swap_nodes_in_pairs_24;
 pub mod remove_nth_node_from_end_of_list_19;
 pub mod four_sum_ii_454;
 pub mod three_sum_15;
+pub mod reverse_words_in_a_string_151;
