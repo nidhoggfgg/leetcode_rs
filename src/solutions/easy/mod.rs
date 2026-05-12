@@ -19,3 +19,4 @@ pub mod reverse_string_344;
 pub mod reverse_string_ii_541;
 pub mod separate_the_digits_in_an_array_2553;
 pub mod valid_parentheses_20;
+pub mod remove_all_adjacent_duplicates_in_string_1047;
