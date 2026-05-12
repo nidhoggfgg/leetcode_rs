@@ -15,3 +15,4 @@ pub mod intersection_of_two_arrays_349;
 pub mod happy_number_202;
 pub mod two_sum_1;
 pub mod ransom_note_383;
+pub mod reverse_string_344;
