@@ -20,3 +20,6 @@ pub mod reverse_string_ii_541;
 pub mod separate_the_digits_in_an_array_2553;
 pub mod valid_parentheses_20;
 pub mod remove_all_adjacent_duplicates_in_string_1047;
+pub mod binary_tree_inorder_traversal_94;
+pub mod binary_tree_preorder_traversal_144;
+pub mod binary_tree_postorder_traversal_145;
