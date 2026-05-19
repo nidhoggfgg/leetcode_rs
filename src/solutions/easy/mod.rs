@@ -24,3 +24,4 @@ pub mod binary_tree_inorder_traversal_94;
 pub mod binary_tree_preorder_traversal_144;
 pub mod binary_tree_postorder_traversal_145;
 pub mod minimum_common_value_2540;
+pub mod invert_binary_tree_226;
