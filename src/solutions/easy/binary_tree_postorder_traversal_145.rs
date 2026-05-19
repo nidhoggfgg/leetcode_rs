@@ -29,17 +29,31 @@ use std::rc::Rc;
 use std::cell::RefCell;
 type Node = Rc<RefCell<TreeNode>>;
 impl Solution {
+    // pub fn postorder_traversal(root: Option<Node>) -> Vec<i32> {
+    //     let mut result = Vec::new();
+    //     Self::traversal(root, &mut result);
+    //     result
+    // }
+    // fn traversal(node: Option<Node>, result: &mut Vec<i32>) {
+    //     if node.is_none() {return;}
+    //     Self::traversal(node.as_ref().unwrap().borrow().left.clone(), result);
+    //     Self::traversal(node.as_ref().unwrap().borrow().right.clone(), result);
+    //     result.push(node.as_ref().unwrap().borrow().val);
+    // }
+
     pub fn postorder_traversal(root: Option<Node>) -> Vec<i32> {
         let mut result = Vec::new();
-        Self::traversal(root, &mut result);
+        let mut stack = Vec::new();
+        if root.is_none() { return result; }
+        stack.push(root.unwrap().clone());
+        while !stack.is_empty() {
+            let x = stack.pop().unwrap();
+            result.push(x.borrow().val);
+            if let Some(l) = x.borrow().left.clone() { stack.push(l); };
+            if let Some(r) = x.borrow().right.clone() { stack.push(r); };
+        }
+        result.reverse();
         result
-    }
-
-    fn traversal(node: Option<Node>, result: &mut Vec<i32>) {
-        if node.is_none() {return;}
-        Self::traversal(node.as_ref().unwrap().borrow().left.clone(), result);
-        Self::traversal(node.as_ref().unwrap().borrow().right.clone(), result);
-        result.push(node.as_ref().unwrap().borrow().val);
     }
 }
 // @lc code=end
