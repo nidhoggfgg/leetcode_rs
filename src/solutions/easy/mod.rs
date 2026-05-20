@@ -29,3 +29,4 @@ pub mod symmetric_tree_101;
 pub mod maximum_depth_of_binary_tree_104;
 pub mod minimum_depth_of_binary_tree_111;
 pub mod count_complete_tree_nodes_222;
+pub mod search_insert_position_35;
