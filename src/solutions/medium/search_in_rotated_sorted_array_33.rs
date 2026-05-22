@@ -9,31 +9,23 @@ use super::Solution;
 // @lc code=start
 impl Solution {
     pub fn search(nums: Vec<i32>, target: i32) -> i32 {
-        let mut left = 0;
-        let mut right = nums.len() - 1;
-
-        while left <= right {
-            let mid = left + (right - left) / 2;
-
-            if target == nums[mid] {
-                return mid as i32;
-            }
-
-            if nums[left] <= nums[mid] {
-                if nums[left] <= target && target < nums[mid] {
-                    right = mid - 1;
-                } else {
-                    left = mid + 1;
-                }
-            } else {
-                if nums[mid] < target && target <= nums[right] {
-                    left = mid + 1;
-                } else {
-                    right = mid - 1;
-                }
+        let mut l = 0;
+        let mut r = nums.len();
+        while l < r {
+            let m = l+(r-l)/2;
+            // l..m..|..r r<l<m
+            // l..|..m..r m<r<l
+            // l..m..r| l<m<r
+            match nums[m].cmp(&target) {
+                std::cmp::Ordering::Less=>
+                    if nums[l]<nums[m]||nums[r-1]>=target{l=m+1}
+                    else{r=m}
+                std::cmp::Ordering::Equal=>return m as i32,
+                std::cmp::Ordering::Greater=>
+                    if nums[r-1]>nums[m]||nums[l]<=target{r=m}
+                    else{l=m+1}
             }
         }
-
         -1
     }
 }
