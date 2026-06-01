@@ -4,8 +4,6 @@
  * [77] Combinations
  */
 
-use std::collections::VecDeque;
-
 pub struct Solution;
 
 // @lc code=start
