@@ -6,3 +6,4 @@ pub mod substring_with_concatenation_of_all_words_30;
 pub mod minimum_initial_energy_to_finish_tasks_1665;
 pub mod sliding_window_maximum_239;
 pub mod first_missing_positive_41;
+pub mod longest_common_suffix_queries_3093;
