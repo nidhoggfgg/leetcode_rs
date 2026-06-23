@@ -32,3 +32,4 @@ pub mod count_complete_tree_nodes_222;
 pub mod search_insert_position_35;
 pub mod minimum_cost_of_buying_candies_with_discount_2144;
 pub mod minimum_element_after_replacement_with_digit_sum_3300;
+pub mod maximum_number_of_balloons_1189;
