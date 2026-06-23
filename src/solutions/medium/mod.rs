@@ -35,3 +35,4 @@ pub mod earliest_finish_time_for_land_and_water_rides_ii_3635;
 pub mod wiggle_subsequence_376;
 pub mod maximum_subarray_53;
 pub mod best_time_to_buy_and_sell_stock_ii_122;
+pub mod jump_game_55;
