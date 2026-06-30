@@ -35,3 +35,4 @@ pub mod minimum_element_after_replacement_with_digit_sum_3300;
 pub mod maximum_number_of_balloons_1189;
 pub mod assign_cookies_455;
 pub mod maximize_sum_of_array_after_k_negations_1005;
+pub mod number_of_strings_that_appear_as_substrings_in_word_1967;
