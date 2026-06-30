@@ -38,3 +38,4 @@ pub mod best_time_to_buy_and_sell_stock_ii_122;
 pub mod jump_game_55;
 pub mod gas_station_134;
 pub mod number_of_substrings_containing_all_three_characters_1358;
+pub mod queue_reconstruction_by_height_406;
