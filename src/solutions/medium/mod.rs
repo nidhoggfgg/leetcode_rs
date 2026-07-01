@@ -41,3 +41,4 @@ pub mod number_of_substrings_containing_all_three_characters_1358;
 pub mod queue_reconstruction_by_height_406;
 pub mod minimum_number_of_arrows_to_burst_balloons_452;
 pub mod unique_paths_62;
+pub mod integer_break_343;
