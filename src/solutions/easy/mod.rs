@@ -39,3 +39,4 @@ pub mod number_of_strings_that_appear_as_substrings_in_word_1967;
 pub mod lemonade_change_860;
 pub mod fibonacci_number_509;
 pub mod climbing_stairs_70;
+pub mod min_cost_climbing_stairs_746;
