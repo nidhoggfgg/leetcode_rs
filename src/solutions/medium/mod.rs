@@ -39,3 +39,4 @@ pub mod jump_game_55;
 pub mod gas_station_134;
 pub mod number_of_substrings_containing_all_three_characters_1358;
 pub mod queue_reconstruction_by_height_406;
+pub mod minimum_number_of_arrows_to_burst_balloons_452;
