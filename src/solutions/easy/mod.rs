@@ -37,3 +37,4 @@ pub mod assign_cookies_455;
 pub mod maximize_sum_of_array_after_k_negations_1005;
 pub mod number_of_strings_that_appear_as_substrings_in_word_1967;
 pub mod lemonade_change_860;
+pub mod fibonacci_number_509;
