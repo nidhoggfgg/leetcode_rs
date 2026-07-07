@@ -40,3 +40,4 @@ pub mod lemonade_change_860;
 pub mod fibonacci_number_509;
 pub mod climbing_stairs_70;
 pub mod min_cost_climbing_stairs_746;
+pub mod concatenate_non_zero_digits_and_multiply_by_sum_i_3754;
