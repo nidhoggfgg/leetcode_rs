@@ -46,3 +46,4 @@ pub mod remove_covered_intervals_1288;
 pub mod sequential_digits_1291;
 pub mod sum_of_gcd_of_formed_pairs_3867;
 pub mod two_sum_ii_input_array_is_sorted_167;
+pub mod range_sum_query_2_d_immutable_304;
