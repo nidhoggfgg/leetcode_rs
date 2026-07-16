@@ -44,3 +44,4 @@ pub mod unique_paths_62;
 pub mod integer_break_343;
 pub mod remove_covered_intervals_1288;
 pub mod sequential_digits_1291;
+pub mod sum_of_gcd_of_formed_pairs_3867;
