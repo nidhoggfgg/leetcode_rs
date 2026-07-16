@@ -43,3 +43,4 @@ pub mod min_cost_climbing_stairs_746;
 pub mod concatenate_non_zero_digits_and_multiply_by_sum_i_3754;
 pub mod merge_two_sorted_lists_21;
 pub mod gcd_of_odd_and_even_sums_3658;
+pub mod move_zeroes_283;
