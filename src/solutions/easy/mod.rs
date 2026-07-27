@@ -45,3 +45,4 @@ pub mod merge_two_sorted_lists_21;
 pub mod gcd_of_odd_and_even_sums_3658;
 pub mod move_zeroes_283;
 pub mod range_sum_query_immutable_303;
+pub mod maximum_product_of_two_elements_in_an_array_1464;
