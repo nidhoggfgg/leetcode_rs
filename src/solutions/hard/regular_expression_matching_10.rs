@@ -8,7 +8,7 @@ use super::Solution;
 
 // @lc code=start
 impl Solution {
-    pub fn is_match(s: String, p: String) -> bool {
+    pub fn is_match(_s: String, _p: String) -> bool {
         todo!()
     }
 }
