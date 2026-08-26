@@ -40,6 +40,7 @@ pub mod reverse_words_in_a_string_151;
 pub mod search_in_rotated_sorted_array_33;
 pub mod separate_squares_i_3453;
 pub mod sequential_digits_1291;
+pub mod shortest_and_lexicographically_smallest_beautiful_string_2904;
 pub mod smallest_integer_divisible_by_k_1015;
 pub mod spiral_matrix_ii_59;
 pub mod string_to_integer_atoi_8;
