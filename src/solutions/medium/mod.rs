@@ -15,6 +15,7 @@ pub mod earliest_finish_time_for_land_and_water_rides_ii_3635;
 pub mod evaluate_reverse_polish_notation_150;
 pub mod find_first_and_last_position_of_element_in_sorted_array_34;
 pub mod find_the_length_of_the_longest_common_prefix_3043;
+pub mod find_the_minimum_and_maximum_number_of_nodes_between_critical_points_2058;
 pub mod find_the_prefix_common_array_of_two_arrays_2657;
 pub mod four_sum_18;
 pub mod four_sum_ii_454;
