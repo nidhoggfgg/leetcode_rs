@@ -27,6 +27,7 @@ pub mod jump_game_55;
 pub mod length_of_longest_subarray_with_at_most_k_frequency_2958;
 pub mod longest_palindromic_substring_5;
 pub mod maximum_subarray_53;
+pub mod minimum_moves_to_clean_the_classroom_3568;
 pub mod minimum_number_of_arrows_to_burst_balloons_452;
 pub mod minimum_size_subarray_sum_209;
 pub mod multiply_strings_43;
