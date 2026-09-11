@@ -45,5 +45,6 @@ pub mod smallest_missing_multiple_of_k_3718;
 pub mod squares_of_a_sorted_array_977;
 pub mod symmetric_tree_101;
 pub mod two_sum_1;
+pub mod unique_3_digit_even_numbers_3483;
 pub mod valid_anagram_242;
 pub mod valid_parentheses_20;
