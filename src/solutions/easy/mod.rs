@@ -31,6 +31,7 @@ pub mod number_of_strings_that_appear_as_substrings_in_word_1967;
 pub mod palindrome_number_9;
 pub mod range_sum_query_immutable_303;
 pub mod ransom_note_383;
+pub mod rectangle_overlap_836;
 pub mod remove_all_adjacent_duplicates_in_string_1047;
 pub mod remove_duplicates_from_sorted_array_26;
 pub mod remove_element_27;
