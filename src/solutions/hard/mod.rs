@@ -11,3 +11,4 @@ pub mod regular_expression_matching_10;
 pub mod sliding_window_maximum_239;
 pub mod stone_game_iv_1510;
 pub mod substring_with_concatenation_of_all_words_30;
+pub mod sum_of_sortable_integers_3886;
