@@ -32,6 +32,7 @@ pub mod longest_palindromic_substring_5;
 pub mod maximum_subarray_53;
 pub mod minimum_moves_to_clean_the_classroom_3568;
 pub mod minimum_number_of_arrows_to_burst_balloons_452;
+pub mod minimum_operations_to_sort_a_permutation_3942;
 pub mod minimum_operations_to_sort_a_string_3863;
 pub mod minimum_size_subarray_sum_209;
 pub mod multiply_strings_43;
