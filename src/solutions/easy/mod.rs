@@ -8,6 +8,7 @@ pub mod binary_tree_preorder_traversal_144;
 pub mod climbing_stairs_70;
 pub mod concatenate_non_zero_digits_and_multiply_by_sum_i_3754;
 pub mod count_complete_tree_nodes_222;
+pub mod create_grid_with_exactly_one_path_3963;
 pub mod fibonacci_number_509;
 pub mod find_target_indices_after_sorting_array_2089;
 pub mod find_the_index_of_the_first_occurrence_in_a_string_28;
