@@ -2,6 +2,8 @@ pub use crate::solutions::Solution;
 
 pub mod count_subarrays_with_majority_element_ii_3739;
 pub mod distinct_subsequences_ii_940;
+#[allow(unused)]
+pub mod find_median_from_data_stream_295;
 pub mod first_missing_positive_41;
 pub mod longest_common_suffix_queries_3093;
 pub mod longest_valid_parentheses_32;

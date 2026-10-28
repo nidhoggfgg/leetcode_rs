@@ -14,6 +14,7 @@ pub mod find_target_indices_after_sorting_array_2089;
 pub mod find_the_index_of_the_first_occurrence_in_a_string_28;
 pub mod gcd_of_odd_and_even_sums_3658;
 pub mod happy_number_202;
+#[allow(unused)]
 pub mod implement_queue_using_stacks_232;
 pub mod intersection_of_two_arrays_349;
 pub mod invert_binary_tree_226;
