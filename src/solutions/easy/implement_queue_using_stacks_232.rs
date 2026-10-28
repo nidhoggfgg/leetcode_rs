@@ -49,9 +49,9 @@ impl MyQueue {
     }
 
     fn intoout(&mut self) {
-        let instack = std::mem::take(&mut self.instack);
-        for x in instack.into_iter().rev() {
-            self.outstack.push(x);
+        let mut instack = std::mem::take(&mut self.instack);
+        while let Some(v) = instack.pop() {
+            self.outstack.push(v);
         }
     }
 }
