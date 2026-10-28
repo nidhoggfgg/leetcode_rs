@@ -28,6 +28,7 @@ pub mod image_overlap_835;
 pub mod integer_break_343;
 pub mod integer_to_roman_12;
 pub mod jump_game_55;
+pub mod kth_largest_element_in_an_array_215;
 pub mod length_of_longest_subarray_with_at_most_k_frequency_2958;
 pub mod longest_palindromic_substring_5;
 pub mod maximum_subarray_53;
