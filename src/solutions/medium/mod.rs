@@ -36,6 +36,7 @@ pub mod minimum_number_of_arrows_to_burst_balloons_452;
 pub mod minimum_operations_to_sort_a_permutation_3942;
 pub mod minimum_operations_to_sort_a_string_3863;
 pub mod minimum_size_subarray_sum_209;
+pub mod minimum_xor_path_in_a_grid_3882;
 pub mod multiply_strings_43;
 pub mod next_permutation_31;
 pub mod number_of_substrings_containing_all_three_characters_1358;
