@@ -24,6 +24,7 @@ pub mod four_sum_18;
 pub mod four_sum_ii_454;
 pub mod gas_station_134;
 pub mod generate_parentheses_22;
+pub mod house_robber_ii_213;
 pub mod image_overlap_835;
 pub mod integer_break_343;
 pub mod integer_to_roman_12;

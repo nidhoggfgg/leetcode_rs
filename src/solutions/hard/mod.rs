@@ -9,6 +9,7 @@ pub mod longest_common_suffix_queries_3093;
 pub mod longest_valid_parentheses_32;
 pub mod minimum_initial_energy_to_finish_tasks_1665;
 pub mod number_of_zig_zag_arrays_i_3699;
+pub mod palindromic_path_queries_in_a_tree_3841;
 pub mod regular_expression_matching_10;
 pub mod sliding_window_maximum_239;
 pub mod stone_game_iv_1510;
