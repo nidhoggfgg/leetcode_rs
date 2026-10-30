@@ -27,7 +27,7 @@ impl Solution {
 
         let mut result: Vec<i32> = nums.into_iter().map(|x| x.pow(2)).collect();
         result.sort_unstable();
-        return result;
+        result
     }
 }
 // @lc code=end

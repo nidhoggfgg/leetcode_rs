@@ -28,19 +28,19 @@ impl MyQueue {
 
     fn pop(&mut self) -> i32 {
         if let Some(v) = self.outstack.pop() {
-            return v;
+            v
         } else {
             self.intoout();
-            return self.outstack.pop().unwrap();
+            self.outstack.pop().unwrap()
         }
     }
 
     fn peek(&mut self) -> i32 {
         if let Some(v) = self.outstack.last() {
-            return *v;
+            *v
         } else {
             self.intoout();
-            return *self.outstack.last().unwrap();
+            *self.outstack.last().unwrap()
         }
     }
 

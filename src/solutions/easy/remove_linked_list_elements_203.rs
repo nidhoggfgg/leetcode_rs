@@ -62,7 +62,7 @@ impl Solution {
             }
         }
 
-        return dummy_head.next;
+        dummy_head.next
     }
 }
 // @lc code=end

@@ -42,7 +42,7 @@ impl Solution {
             let mut i = 0;
             loop {
                 if vx % 10 == 1 {
-                    vx = vx / 10;
+                    vx /= 10;
                     i += 1;
                 } else {
                     break;

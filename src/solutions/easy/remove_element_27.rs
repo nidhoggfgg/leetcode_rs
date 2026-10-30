@@ -16,7 +16,7 @@ impl Solution {
                 last += 1;
             }
         }
-        return last as i32;
+        last as i32
     }
 }
 // @lc code=end

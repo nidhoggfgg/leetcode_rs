@@ -14,7 +14,7 @@ impl Solution {
             last[(c-b'a')as usize]=i as i32;
             ans += last[0].min(last[1]).min(last[2])+1;
         }
-        ans as i32
+        ans
     }
 }
 // @lc code=end

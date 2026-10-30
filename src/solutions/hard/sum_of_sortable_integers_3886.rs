@@ -11,7 +11,7 @@ fn frac(n: usize) -> Vec<usize> {
     let mut i = 2;
     let mut result = vec![1, n];
     while i <= n / i {
-        if n % i == 0 {
+        if n.is_multiple_of(i) {
             result.push(i);
             if i != n / i {
                 result.push(n / i);

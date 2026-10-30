@@ -16,7 +16,7 @@ impl Solution {
         let num_rows = num_rows as usize;
         let cs: Vec<_> = s.chars().collect();
         let mut result = Vec::new();
-        let chunk_size = (num_rows * 2 - 2) as usize;
+        let chunk_size = (num_rows * 2 - 2);
         let chunk_num = cs.len() / chunk_size;
         let chunk = chunk_size * chunk_num;
         for j in 0..chunk_num {

@@ -35,7 +35,7 @@ impl MinStack {
 
     fn pop(&mut self) {
         let v = self.stack.pop();
-        if v == None {
+        if v.is_none() {
             return;
         }
         let n = self.stack.len();

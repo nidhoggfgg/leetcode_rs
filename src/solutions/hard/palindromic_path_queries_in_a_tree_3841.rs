@@ -105,10 +105,10 @@ struct Fenwick {}
 
 impl Solution {
     pub fn palindrome_path(
-        n: i32,
-        edges: Vec<Vec<i32>>,
-        s: String,
-        queries: Vec<String>,
+        _n: i32,
+        _edges: Vec<Vec<i32>>,
+        _s: String,
+        _queries: Vec<String>,
     ) -> Vec<bool> {
         todo!()
     }

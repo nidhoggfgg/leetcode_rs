@@ -33,7 +33,7 @@ impl Solution {
                 }
             }
 
-            if '0' <= c && c <= '9' {
+            if ('0'..='9').contains(&c) {
                 if c == '0' && prefix_zero {
                     continue;
                 }
@@ -46,24 +46,24 @@ impl Solution {
         if result.len() > 10 {
             // > 2 ^ 32
             if is_neg {
-                return i32::MIN;
+                i32::MIN
             } else {
-                return i32::MAX;
+                i32::MAX
             }
         } else {
             let s: String = result.iter().collect();
             let v: i64 = s.parse().unwrap_or(0);
             if is_neg {
                 if -v < i32::MIN as i64 {
-                    return i32::MIN;
+                    i32::MIN
                 } else {
-                    return -v as i32;
+                    -v as i32
                 }
             } else {
                 if v > i32::MAX as i64 {
-                    return i32::MAX;
+                    i32::MAX
                 } else {
-                    return v as i32;
+                    v as i32
                 }
             }
         }

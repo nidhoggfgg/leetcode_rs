@@ -22,7 +22,7 @@ impl Solution {
         let mut stamp = 1;
         for i in 1..n {
             let g = grid[i][0] as usize;
-            last_line[0].iter_mut().for_each(|x| *x = *x ^ g);
+            last_line[0].iter_mut().for_each(|x| *x ^= g);
 
             for j in 1..m {
                 let mut current = std::mem::take(&mut last_line[j]);
@@ -43,7 +43,7 @@ impl Solution {
                 }
 
                 let g = grid[i][j] as usize;
-                current.iter_mut().for_each(|x| *x = *x ^ g);
+                current.iter_mut().for_each(|x| *x ^= g);
                 last_line[j] = current;
                 stamp += 1;
             }

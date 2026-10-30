@@ -46,8 +46,8 @@ impl Solution {
         let mut stack = Vec::new();
         if root.is_none() { return result; }
         stack.push(root.unwrap().clone());
-        while !stack.is_empty() {
-            let x = stack.pop().unwrap();
+        while let Some(x) = stack.pop() {
+            
             result.push(x.borrow().val);
             if let Some(l) = x.borrow().left.clone() { stack.push(l); };
             if let Some(r) = x.borrow().right.clone() { stack.push(r); };

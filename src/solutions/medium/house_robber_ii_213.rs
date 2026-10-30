@@ -7,7 +7,7 @@ pub struct Solution;
 
 // @lc code=start
 impl Solution {
-    pub fn rob(nums: Vec<i32>) -> i32 {
+    pub fn rob(_nums: Vec<i32>) -> i32 {
         todo!()
     }
 }

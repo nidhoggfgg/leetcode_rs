@@ -16,12 +16,12 @@ impl Solution {
             let middle = left + (right - left) / 2;
             match nums[middle as usize].cmp(&target) {
                 Ordering::Greater => right = middle,
-                Ordering::Equal => return middle as i32,
+                Ordering::Equal => return middle,
                 Ordering::Less => left = middle + 1,
             }
         }
 
-        return -1;
+        -1
     }
 }
 // @lc code=end

@@ -22,9 +22,9 @@ impl Solution {
         }
 
         if result == usize::MAX {
-            return 0;
+            0
         } else {
-            return result as i32;
+            result as i32
         }
     }
 }

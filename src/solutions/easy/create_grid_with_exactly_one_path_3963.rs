@@ -11,12 +11,12 @@ impl Solution {
     pub fn create_grid(m: i32, n: i32) -> Vec<String> {
         let (m, n) = (n as usize, m as usize);
         if m == 1 {
-            return vec![".".to_string(); n as usize];
+            return vec![".".to_string(); n];
         }
         if n == 1 {
-            return vec![".".repeat(m as usize)];
+            return vec![".".repeat(m)];
         }
-        let mut result = Vec::with_capacity(n as usize);
+        let mut result = Vec::with_capacity(n);
         let mut k = 0;
         for _ in 0..n - 1 {
             let mut s = "#".repeat(k);

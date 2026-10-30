@@ -20,7 +20,7 @@ impl Solution {
                     value += grid[i][j] as i64;
                     grid[i][j] = 0;
                 }
-                while que.len() != 0 {
+                while !que.is_empty() {
                     let (i, j) = que.pop_front().unwrap();
                     if i + 1 != n && grid[i + 1][j] != 0 {
                         que.push_back((i + 1, j));

@@ -18,7 +18,7 @@ impl Solution {
             if left > 0 && nums[left] == nums[left-1] { continue; }
             let t = target as i64 - nums[left] as i64;
             let r = Solution::three_sum(&nums, left+1, len, t);
-            if r.len() > 0 { r.into_iter().for_each(|mut x| {x.push(nums[left]); result.push(x);});}
+            if !r.is_empty() { r.into_iter().for_each(|mut x| {x.push(nums[left]); result.push(x);});}
         }
 
         result

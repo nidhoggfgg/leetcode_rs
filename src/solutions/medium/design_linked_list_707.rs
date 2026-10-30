@@ -41,6 +41,12 @@ impl Node {
  * obj.add_at_index(index, val);
  * obj.delete_at_index(index);
  */
+impl Default for MyLinkedList {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl MyLinkedList {
     pub fn new() -> Self {
         Self {

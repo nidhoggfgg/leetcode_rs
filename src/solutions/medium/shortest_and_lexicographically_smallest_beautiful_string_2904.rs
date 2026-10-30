@@ -24,7 +24,7 @@ impl Solution {
 
         let mut ans: Option<&[usize]> = None;
 
-        for chunk in indexs.windows(k as usize) {
+        for chunk in indexs.windows(k) {
             if let Some(c) = ans {
                 let start_a = chunk[0];
                 let start_b = c[0];

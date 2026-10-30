@@ -35,7 +35,7 @@ impl Solution {
 
         let n = n as usize;
         let mut p = 0;
-        let mut result = vec![vec![0_i32; n as usize]; n as usize];
+        let mut result = vec![vec![0_i32; n]; n];
         let mut start = 1;
         while p < n/2 {
             let mut now = start;
@@ -52,7 +52,7 @@ impl Solution {
             p += 1;
         }
 
-        if n % 2 != 0 {
+        if !n.is_multiple_of(2) {
             result[n/2][n/2] = (n * n) as i32;
         }
 

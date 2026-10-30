@@ -43,7 +43,7 @@ impl Solution {
             l += 1;
             r -= 1;
         }
-        return (l, r);
+        (l, r)
     }
 }
 // @lc code=end

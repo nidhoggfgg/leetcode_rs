@@ -167,7 +167,7 @@ mod attempt {
                         }
                         if let Some(l) = first_indexes.get(c) {
                             for x in l {
-                                if r.now == *x || r.append.get(x) != None {
+                                if r.now == *x || r.append.get(x).is_some() {
                                     continue;
                                 }
                                 let mut append = r.append.clone();
@@ -176,7 +176,7 @@ mod attempt {
                                     start: r.start,
                                     now: *x,
                                     index: 1,
-                                    append: append,
+                                    append,
                                 });
                             }
                         }

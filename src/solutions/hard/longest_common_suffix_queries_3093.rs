@@ -41,7 +41,7 @@ impl Solution {
 
     
     pub fn string_indices(words_container: Vec<String>, words_query: Vec<String>) -> Vec<i32> {
-        const A: u8 = 'a' as u8;
+        const A: u8 = b'a';
         struct Node {
             children: [i32; 26],
             best: usize,

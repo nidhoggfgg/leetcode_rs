@@ -21,7 +21,7 @@ impl Solution {
                 return i as i32 + 1;
             }
         }
-        len as i32 + 1
+        len + 1
     }
 }
 // @lc code=end
