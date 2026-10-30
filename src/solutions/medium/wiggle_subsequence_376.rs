@@ -12,16 +12,16 @@ impl Solution {
         let mut result = 0;
         let len = nums.len();
         for i in 1..len {
-            if diff >= 0 && nums[i] < nums[i-1] {
-                result+=1;
+            if diff >= 0 && nums[i] < nums[i - 1] {
+                result += 1;
                 diff = -1;
             }
-            if diff <= 0 && nums[i] > nums[i-1] {
-                result+=1;
+            if diff <= 0 && nums[i] > nums[i - 1] {
+                result += 1;
                 diff = 1;
             }
         }
-        result+1
+        result + 1
     }
 }
 // @lc code=end

@@ -12,13 +12,14 @@ impl Solution {
         for mut x in nums {
             let mut sum = 0;
             while x > 0 {
-                sum+=x%10;
-                x/=10;
+                sum += x % 10;
+                x /= 10;
             }
-            if sum < result { result = sum; }
+            if sum < result {
+                result = sum;
+            }
         }
         result
     }
 }
 // @lc code=end
-

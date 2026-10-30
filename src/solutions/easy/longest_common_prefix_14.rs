@@ -11,13 +11,7 @@ impl Solution {
     pub fn longest_common_prefix(strs: Vec<String>) -> String {
         let mut css: Vec<_> = strs.iter().map(|x| x.chars()).collect();
         let mut num = 0;
-        loop {
-            let now = if let Some(x) = css[0].nth(0) {
-                x
-            } else {
-                break;
-            };
-
+        while let Some(now) = css[0].nth(0) {
             let mut end = false;
             for cs in css.iter_mut().skip(1) {
                 if let Some(x) = cs.nth(0) {

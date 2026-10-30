@@ -4,7 +4,6 @@
  * [30] Substring with Concatenation of All Words
  */
 
-
 use super::Solution;
 
 // @lc code=start
@@ -167,7 +166,7 @@ mod attempt {
                         }
                         if let Some(l) = first_indexes.get(c) {
                             for x in l {
-                                if r.now == *x || r.append.get(x).is_some() {
+                                if r.now == *x || r.append.contains(x) {
                                     continue;
                                 }
                                 let mut append = r.append.clone();

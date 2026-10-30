@@ -13,7 +13,7 @@ impl Solution {
             '(' | ')' => Some(false),
             '[' | ']' => Some(true),
             '{' | '}' => None,
-            _ => unreachable!()
+            _ => unreachable!(),
         };
         for c in s.chars() {
             match c {
@@ -27,7 +27,7 @@ impl Solution {
                         return false;
                     }
                 }
-                _ => unreachable!()
+                _ => unreachable!(),
             }
         }
 
@@ -35,4 +35,3 @@ impl Solution {
     }
 }
 // @lc code=end
-

@@ -4,7 +4,6 @@
  * [239] Sliding Window Maximum
  */
 
-
 pub struct Solution;
 // @lc code=start
 use std::collections::VecDeque;
@@ -20,14 +19,17 @@ impl Default for Pque {
 
 impl Pque {
     pub fn new() -> Self {
-        Self { que: VecDeque::new() }
+        Self {
+            que: VecDeque::new(),
+        }
     }
 
     pub fn pop(&mut self, index: usize) {
         if let Some((i, _)) = self.que.front()
-            && *i == index {
-                self.que.pop_front();
-            }
+            && *i == index
+        {
+            self.que.pop_front();
+        }
     }
 
     pub fn push(&mut self, index: usize, value: i32) {
@@ -57,7 +59,7 @@ impl Solution {
         }
         result.push(pque.max());
         for i in k..nums.len() {
-            pque.pop(i-k);
+            pque.pop(i - k);
             pque.push(i, nums[i]);
             result.push(pque.max());
         }
@@ -66,4 +68,3 @@ impl Solution {
     }
 }
 // @lc code=end
-

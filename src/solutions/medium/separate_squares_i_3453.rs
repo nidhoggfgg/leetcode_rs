@@ -4,8 +4,6 @@
  * [3453] Separate Squares I
  */
 
-use std::i32;
-
 use super::Solution;
 
 // @lc code=start
@@ -58,12 +56,12 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use std::vec;
     use super::*;
+    use std::vec;
 
     #[test]
     fn test_1() {
-        let squares = vec![vec![0,0,1], vec![2,2,1]];
+        let squares = vec![vec![0, 0, 1], vec![2, 2, 1]];
         let x = 1.0;
         let r = Solution::separate_squares(squares) - x;
         assert!(r < 0.00001);

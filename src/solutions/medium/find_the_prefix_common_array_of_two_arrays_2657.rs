@@ -4,7 +4,6 @@
  * [2657] Find the Prefix Common Array of Two Arrays
  */
 
-
 pub struct Solution;
 
 // @lc code=start
@@ -22,13 +21,17 @@ impl Solution {
                 result.push(now);
                 continue;
             }
-            if sa.contains(&b[i]) { now += 1; }
-            if sb.contains(&a[i]) { now += 1; }
-            sa.insert(a[i]); sb.insert(b[i]);
+            if sa.contains(&b[i]) {
+                now += 1;
+            }
+            if sb.contains(&a[i]) {
+                now += 1;
+            }
+            sa.insert(a[i]);
+            sb.insert(b[i]);
             result.push(now);
         }
         result
     }
 }
 // @lc code=end
-

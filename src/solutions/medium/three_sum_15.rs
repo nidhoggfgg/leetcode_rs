@@ -4,7 +4,6 @@
  * [15] 3Sum
  */
 
-
 use super::Solution;
 
 // @lc code=start
@@ -14,9 +13,13 @@ impl Solution {
         let mut result = Vec::new();
         let len = nums.len();
         nums.sort_unstable();
-        if len < 3 { return result; }
-        for left in 0..len-2 {
-            if left > 0 && nums[left] == nums[left-1] {continue;}
+        if len < 3 {
+            return result;
+        }
+        for left in 0..len - 2 {
+            if left > 0 && nums[left] == nums[left - 1] {
+                continue;
+            }
             let mut mid = left + 1;
             let mut right = len - 1;
             while mid < right {
@@ -25,8 +28,12 @@ impl Solution {
                     Ordering::Less => mid += 1,
                     Ordering::Equal => {
                         result.push(vec![nums[left], nums[mid], nums[right]]);
-                        while mid < right && nums[mid] == nums[mid+1] { mid+=1; }
-                        while right > mid && nums[right] == nums[right-1] { right-=1; }
+                        while mid < right && nums[mid] == nums[mid + 1] {
+                            mid += 1;
+                        }
+                        while right > mid && nums[right] == nums[right - 1] {
+                            right -= 1;
+                        }
                         mid += 1;
                         right -= 1;
                     }

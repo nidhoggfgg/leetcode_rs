@@ -6,26 +6,26 @@
 // Definition for a binary tree node.
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {
-  pub val: i32,
-  pub left: Option<Rc<RefCell<TreeNode>>>,
-  pub right: Option<Rc<RefCell<TreeNode>>>,
+    pub val: i32,
+    pub left: Option<Rc<RefCell<TreeNode>>>,
+    pub right: Option<Rc<RefCell<TreeNode>>>,
 }
 
 impl TreeNode {
-  #[inline]
-  pub fn new(val: i32) -> Self {
-    TreeNode {
-      val,
-      left: None,
-      right: None
+    #[inline]
+    pub fn new(val: i32) -> Self {
+        TreeNode {
+            val,
+            left: None,
+            right: None,
+        }
     }
-  }
 }
 pub struct Solution;
 
 // @lc code=start
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 type Node = Rc<RefCell<TreeNode>>;
 impl Solution {
     // pub fn preorder_traversal(root: Option<Node>) -> Vec<i32> {
@@ -42,7 +42,9 @@ impl Solution {
 
     pub fn preorder_traversal(root: Option<Node>) -> Vec<i32> {
         let mut result = Vec::new();
-        if root.is_none() {return result};
+        if root.is_none() {
+            return result;
+        };
         let mut stack = Vec::new();
         stack.push(root.unwrap());
         while let Some(n) = stack.pop() {
@@ -58,4 +60,3 @@ impl Solution {
     }
 }
 // @lc code=end
-

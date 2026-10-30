@@ -1,4 +1,3 @@
-
 /*
  * @lc app=leetcode.cn id=3699 lang=rust
  *
@@ -13,17 +12,17 @@ impl Solution {
         let mm: u64 = 1_000_000_007;
         let m = (r - l + 1) as u64;
         let um = m as usize;
-        let mut up = vec![0_u64; um+1];
-        let mut down = vec![0_u64; um+1];
-        let mut new_down = vec![0_u64; um+1];
-        let mut new_up = vec![0_u64; um+1];
+        let mut up = vec![0_u64; um + 1];
+        let mut down = vec![0_u64; um + 1];
+        let mut new_down = vec![0_u64; um + 1];
+        let mut new_up = vec![0_u64; um + 1];
 
         for i in 1..=um {
             up[i] = i as u64 - 1;
-            down[i] = m-i as u64;
+            down[i] = m - i as u64;
         }
 
-        for _ in 0..(n-2) {
+        for _ in 0..(n - 2) {
             let mut prefix = 0;
             for i in 1..=um {
                 new_up[i] = prefix;

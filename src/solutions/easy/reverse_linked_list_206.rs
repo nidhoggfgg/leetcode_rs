@@ -8,18 +8,15 @@ pub struct Solution;
 
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
-  pub val: i32,
-  pub next: Option<Box<ListNode>>
+    pub val: i32,
+    pub next: Option<Box<ListNode>>,
 }
 
 impl ListNode {
-  #[inline]
-  pub fn new(val: i32) -> Self {
-    ListNode {
-      next: None,
-      val
+    #[inline]
+    pub fn new(val: i32) -> Self {
+        ListNode { next: None, val }
     }
-  }
 }
 
 // @lc code=start
@@ -27,7 +24,7 @@ impl ListNode {
 impl Solution {
     pub fn reverse_list(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         let mut pre = None;
-        let mut next  = head;
+        let mut next = head;
         while let Some(mut curr) = next {
             next = curr.next;
             curr.next = pre.take();
@@ -37,4 +34,3 @@ impl Solution {
     }
 }
 // @lc code=end
-

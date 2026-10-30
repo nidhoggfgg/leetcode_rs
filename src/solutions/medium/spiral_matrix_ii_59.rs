@@ -4,7 +4,6 @@
  * [59] Spiral Matrix II
  */
 
-
 pub struct Solution;
 
 // @lc code=start
@@ -37,27 +36,26 @@ impl Solution {
         let mut p = 0;
         let mut result = vec![vec![0_i32; n]; n];
         let mut start = 1;
-        while p < n/2 {
+        while p < n / 2 {
             let mut now = start;
-            let l = n - 2*p - 1;
+            let l = n - 2 * p - 1;
             for i in 0..l {
-                result[p][p+i] = now;
-                result[p+i][n-p-1] = now + l as i32;
-                result[n-p-1][n-p-i-1] = now + 2 * l as i32;
-                result[n-p-i-1][p] = now + 3 * l as i32;
+                result[p][p + i] = now;
+                result[p + i][n - p - 1] = now + l as i32;
+                result[n - p - 1][n - p - i - 1] = now + 2 * l as i32;
+                result[n - p - i - 1][p] = now + 3 * l as i32;
                 now += 1;
             }
 
-            start += 4*l as i32;
+            start += 4 * l as i32;
             p += 1;
         }
 
         if !n.is_multiple_of(2) {
-            result[n/2][n/2] = (n * n) as i32;
+            result[n / 2][n / 2] = (n * n) as i32;
         }
 
         result
     }
 }
 // @lc code=end
-

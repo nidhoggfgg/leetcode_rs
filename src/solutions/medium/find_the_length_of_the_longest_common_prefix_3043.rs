@@ -1,4 +1,3 @@
-
 /*
  * @lc app=leetcode.cn id=3043 lang=rust
  *
@@ -22,7 +21,9 @@ impl Solution {
 
         for mut x in arr2 {
             let mut len = x.ilog10() + 1;
-            if len <= result { continue; }
+            if len <= result {
+                continue;
+            }
             while x > 0 {
                 if prefixs.contains(&x) {
                     result = result.max(len);

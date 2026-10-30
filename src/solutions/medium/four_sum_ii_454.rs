@@ -8,7 +8,12 @@ pub struct Solution;
 // @lc code=start
 use std::collections::HashMap;
 impl Solution {
-    pub fn four_sum_count(nums1: Vec<i32>, nums2: Vec<i32>, nums3: Vec<i32>, nums4: Vec<i32>) -> i32 {
+    pub fn four_sum_count(
+        nums1: Vec<i32>,
+        nums2: Vec<i32>,
+        nums3: Vec<i32>,
+        nums4: Vec<i32>,
+    ) -> i32 {
         let mut result = 0;
 
         let mut counts = HashMap::new();
@@ -19,7 +24,7 @@ impl Solution {
         }
         for x in &nums3 {
             for y in &nums4 {
-                if let Some(v) = counts.get(&(-x-y)) {
+                if let Some(v) = counts.get(&(-x - y)) {
                     result += v;
                 }
             }
@@ -28,4 +33,3 @@ impl Solution {
     }
 }
 // @lc code=end
-

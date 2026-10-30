@@ -1,4 +1,3 @@
-
 /*
  * @lc app=leetcode.cn id=70 lang=rust
  *
@@ -10,10 +9,13 @@ pub struct Solution;
 use std::mem::swap;
 impl Solution {
     pub fn climb_stairs(n: i32) -> i32 {
-        let mut now = 1; let mut last = 1;
-        for _ in 0..n {last += now;swap(&mut last, &mut now);}
-        last   
+        let mut now = 1;
+        let mut last = 1;
+        for _ in 0..n {
+            last += now;
+            swap(&mut last, &mut now);
+        }
+        last
     }
 }
 // @lc code=end
-

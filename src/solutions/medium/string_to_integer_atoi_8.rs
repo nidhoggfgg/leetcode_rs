@@ -33,7 +33,7 @@ impl Solution {
                 }
             }
 
-            if ('0'..='9').contains(&c) {
+            if c.is_ascii_digit() {
                 if c == '0' && prefix_zero {
                     continue;
                 }
@@ -45,11 +45,7 @@ impl Solution {
         }
         if result.len() > 10 {
             // > 2 ^ 32
-            if is_neg {
-                i32::MIN
-            } else {
-                i32::MAX
-            }
+            if is_neg { i32::MIN } else { i32::MAX }
         } else {
             let s: String = result.iter().collect();
             let v: i64 = s.parse().unwrap_or(0);

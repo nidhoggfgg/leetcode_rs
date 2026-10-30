@@ -7,18 +7,15 @@
 pub struct Solution;
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
-  pub val: i32,
-  pub next: Option<Box<ListNode>>
+    pub val: i32,
+    pub next: Option<Box<ListNode>>,
 }
 
 impl ListNode {
-  #[inline]
-  pub fn new(val: i32) -> Self {
-    ListNode {
-      next: None,
-      val
+    #[inline]
+    pub fn new(val: i32) -> Self {
+        ListNode { next: None, val }
     }
-  }
 }
 
 // @lc code=start
@@ -32,13 +29,13 @@ impl Solution {
             let mut cur = pre.as_mut().next.take();
             if cur.is_none() {
                 pre.next = cur;
-                break
+                break;
             }
             let mut next = cur.as_mut().unwrap().next.take();
             if next.is_none() {
                 cur.as_mut().unwrap().next = next;
                 pre.next = cur;
-                break
+                break;
             }
 
             cur.as_mut().unwrap().next = next.as_mut().unwrap().next.take();
@@ -59,9 +56,13 @@ mod tests {
     fn compare(mut a: Option<Box<ListNode>>, mut b: Option<Box<ListNode>>) -> bool {
         loop {
             match (&a, &b) {
-                (Some(x), Some(y)) => if x.val != y.val {return false},
+                (Some(x), Some(y)) => {
+                    if x.val != y.val {
+                        return false;
+                    }
+                }
                 (None, None) => return true,
-                (_, _) => return false
+                (_, _) => return false,
             }
             a = a.unwrap().next;
             b = b.unwrap().next;

@@ -9,10 +9,11 @@ pub struct Solution;
 impl Solution {
     pub fn gcd_of_odd_even_sums(n: i32) -> i32 {
         let n = n as u64;
-        let (mut so,mut se)=(n*n,n*(n+1));
-        while so!=0{(se,so)=(so,se%so)}
+        let (mut so, mut se) = (n * n, n * (n + 1));
+        while so != 0 {
+            (se, so) = (so, se % so)
+        }
         se as i32
     }
 }
 // @lc code=end
-

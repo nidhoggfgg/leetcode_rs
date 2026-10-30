@@ -13,7 +13,11 @@ impl Solution {
         for c in s.chars() {
             if c == last_char {
                 stack.pop();
-                last_char = if stack.is_empty() { '\0' } else { stack[stack.len()-1] };
+                last_char = if stack.is_empty() {
+                    '\0'
+                } else {
+                    stack[stack.len() - 1]
+                };
             } else {
                 stack.push(c);
                 last_char = c;
@@ -24,4 +28,3 @@ impl Solution {
     }
 }
 // @lc code=end
-

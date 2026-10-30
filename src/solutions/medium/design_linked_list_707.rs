@@ -70,12 +70,7 @@ impl MyLinkedList {
         } else {
             let mut cur = self.tail.clone();
             for _ in index + 1..self.len {
-                cur = cur
-                    .unwrap()
-                    .borrow()
-                    .prev
-                    .as_ref()
-                    .and_then(Weak::upgrade);
+                cur = cur.unwrap().borrow().prev.as_ref().and_then(Weak::upgrade);
             }
             cur
         }
@@ -143,12 +138,7 @@ impl MyLinkedList {
         }
 
         let next = self.node_at(index).unwrap();
-        let prev = next
-            .borrow()
-            .prev
-            .as_ref()
-            .and_then(Weak::upgrade)
-            .unwrap();
+        let prev = next.borrow().prev.as_ref().and_then(Weak::upgrade).unwrap();
         let node = Node::new(val);
 
         node.borrow_mut().prev = Some(Rc::downgrade(&prev));

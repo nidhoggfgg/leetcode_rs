@@ -101,8 +101,6 @@ pub struct Solution;
 // }
 
 // @lc code=start
-struct Fenwick {}
-
 impl Solution {
     pub fn palindrome_path(
         _n: i32,

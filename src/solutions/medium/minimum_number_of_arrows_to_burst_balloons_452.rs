@@ -12,10 +12,12 @@ impl Solution {
         points.sort_unstable_by_key(|x| x[1]);
         let mut right = points[0][1];
         for x in points {
-            if x[0]>right{right=x[1];ans+=1;}
+            if x[0] > right {
+                right = x[1];
+                ans += 1;
+            }
         }
-        ans+1
+        ans + 1
     }
 }
 // @lc code=end
-

@@ -11,11 +11,12 @@ impl Solution {
         let mut mass = mass as i64;
         asteroids.sort_unstable();
         for x in asteroids {
-            if x as i64 > mass { return false; }
-            mass+=x as i64;
+            if x as i64 > mass {
+                return false;
+            }
+            mass += x as i64;
         }
         true
     }
 }
 // @lc code=end
-

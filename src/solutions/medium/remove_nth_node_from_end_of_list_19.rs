@@ -4,23 +4,19 @@
  * [19] Remove Nth Node From End of List
  */
 
-
 pub struct Solution;
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
-  pub val: i32,
-  pub next: Option<Box<ListNode>>
+    pub val: i32,
+    pub next: Option<Box<ListNode>>,
 }
 
 impl ListNode {
-  #[inline]
-  pub fn new(val: i32) -> Self {
-    ListNode {
-      next: None,
-      val
+    #[inline]
+    pub fn new(val: i32) -> Self {
+        ListNode { next: None, val }
     }
-  }
 }
 
 // @lc code=start
@@ -36,7 +32,9 @@ impl Solution {
         unsafe {
             for _ in 0..=n {
                 // n <= len, unreachable
-                if fast.is_null() { return None; }
+                if fast.is_null() {
+                    return None;
+                }
                 fast = match (*fast).next.as_ref() {
                     Some(node) => &**node as *const ListNode,
                     None => std::ptr::null(),

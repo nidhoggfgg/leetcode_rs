@@ -39,7 +39,6 @@ impl Solution {
     //     result
     // }
 
-    
     pub fn string_indices(words_container: Vec<String>, words_query: Vec<String>) -> Vec<i32> {
         const A: u8 = b'a';
         struct Node {
@@ -47,21 +46,35 @@ impl Solution {
             best: usize,
             len: usize,
         }
-        let mut nodes = vec![Node{children:[-1;26],best:0,len:usize::MAX}];
+        let mut nodes = vec![Node {
+            children: [-1; 26],
+            best: 0,
+            len: usize::MAX,
+        }];
         for (i, x) in words_container.iter().enumerate() {
             let len = x.len();
-            if len<nodes[0].len{nodes[0].len=len;nodes[0].best=i}
+            if len < nodes[0].len {
+                nodes[0].len = len;
+                nodes[0].best = i
+            }
             let mut now = 0;
             for b in x.as_bytes().iter().rev() {
-                let next = nodes[now].children[(b-A)as usize];
+                let next = nodes[now].children[(b - A) as usize];
                 if next >= 0 {
                     let next = next as usize;
-                    if len<nodes[next].len{nodes[next].len=len;nodes[next].best=i;}
-                    now=next;
+                    if len < nodes[next].len {
+                        nodes[next].len = len;
+                        nodes[next].best = i;
+                    }
+                    now = next;
                 } else {
-                    nodes.push(Node{children:[-1;26],best:i,len});
-                    nodes[now].children[(b-A)as usize]=(nodes.len()-1)as i32;
-                    now=nodes.len()-1;
+                    nodes.push(Node {
+                        children: [-1; 26],
+                        best: i,
+                        len,
+                    });
+                    nodes[now].children[(b - A) as usize] = (nodes.len() - 1) as i32;
+                    now = nodes.len() - 1;
                 }
             }
         }
@@ -70,9 +83,9 @@ impl Solution {
         for x in words_query {
             let mut now = 0;
             for b in x.as_bytes().iter().rev() {
-                let next = nodes[now].children[(b-A)as usize];
-                if next>=0 {
-                    now=next as usize;
+                let next = nodes[now].children[(b - A) as usize];
+                if next >= 0 {
+                    now = next as usize;
                 } else {
                     break;
                 }
@@ -85,10 +98,9 @@ impl Solution {
 }
 // @lc code=end
 
-
 #[cfg(test)]
 mod tests {
-use super::Solution;
+    use super::Solution;
     fn vstr2vstring(v: Vec<&str>) -> Vec<String> {
         v.iter().map(|x| x.to_string()).collect()
     }
@@ -104,8 +116,8 @@ use super::Solution;
 
     #[test]
     fn test_2() {
-        let input1 = vstr2vstring(vec!["abcdefgh","poiuygh","ghghgh"]);
-        let input2 = vstr2vstring(vec!["gh","acbfgh","acbfegh"]);
+        let input1 = vstr2vstring(vec!["abcdefgh", "poiuygh", "ghghgh"]);
+        let input2 = vstr2vstring(vec!["gh", "acbfgh", "acbfegh"]);
         let expect = vec![2, 0, 2];
         let result = Solution::string_indices(input1, input2);
         assert_eq!(expect, result);

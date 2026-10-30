@@ -4,7 +4,6 @@
  * [29] Divide Two Integers
  */
 
-
 use super::Solution;
 
 // @lc code=start
@@ -16,20 +15,20 @@ impl Solution {
         if dividend == i32::MIN && divisor == 1 {
             return i32::MIN;
         }
-        
+
         let is_negative = (dividend < 0) ^ (divisor < 0);
-        
+
         let mut dividend = (dividend as i64).abs();
         let divisor = (divisor as i64).abs();
-        
+
         if dividend < divisor {
             return 0;
         }
-        
+
         let mut result = 0;
         let mut current_divisor = divisor;
         let mut current_result = 1;
-        
+
         while dividend >= current_divisor {
             if dividend >= current_divisor << 1 {
                 current_divisor <<= 1;
@@ -41,12 +40,8 @@ impl Solution {
                 current_result = 1;
             }
         }
-        
-        if is_negative {
-            -result
-        } else {
-            result 
-        }
+
+        if is_negative { -result } else { result }
     }
 }
 // @lc code=end

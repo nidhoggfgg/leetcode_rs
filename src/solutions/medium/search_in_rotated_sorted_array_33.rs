@@ -12,18 +12,26 @@ impl Solution {
         let mut l = 0;
         let mut r = nums.len();
         while l < r {
-            let m = l+(r-l)/2;
+            let m = l + (r - l) / 2;
             // l..m..|..r r<l<m
             // l..|..m..r m<r<l
             // l..m..r| l<m<r
             match nums[m].cmp(&target) {
-                std::cmp::Ordering::Less=>
-                    if nums[l]<nums[m]||nums[r-1]>=target{l=m+1}
-                    else{r=m}
-                std::cmp::Ordering::Equal=>return m as i32,
-                std::cmp::Ordering::Greater=>
-                    if nums[r-1]>nums[m]||nums[l]<=target{r=m}
-                    else{l=m+1}
+                std::cmp::Ordering::Less => {
+                    if nums[l] < nums[m] || nums[r - 1] >= target {
+                        l = m + 1
+                    } else {
+                        r = m
+                    }
+                }
+                std::cmp::Ordering::Equal => return m as i32,
+                std::cmp::Ordering::Greater => {
+                    if nums[r - 1] > nums[m] || nums[l] <= target {
+                        r = m
+                    } else {
+                        l = m + 1
+                    }
+                }
             }
         }
         -1

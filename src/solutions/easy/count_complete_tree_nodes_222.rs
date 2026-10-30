@@ -7,26 +7,26 @@
 // Definition for a binary tree node.
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {
-  pub val: i32,
-  pub left: Option<Rc<RefCell<TreeNode>>>,
-  pub right: Option<Rc<RefCell<TreeNode>>>,
+    pub val: i32,
+    pub left: Option<Rc<RefCell<TreeNode>>>,
+    pub right: Option<Rc<RefCell<TreeNode>>>,
 }
 
 impl TreeNode {
-  #[inline]
-  pub fn new(val: i32) -> Self {
-    TreeNode {
-      val,
-      left: None,
-      right: None
+    #[inline]
+    pub fn new(val: i32) -> Self {
+        TreeNode {
+            val,
+            left: None,
+            right: None,
+        }
     }
-  }
 }
 pub struct Solution;
 
 // @lc code=start
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
     // pub fn count_nodes(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
     //     if root.is_none() { return 0; }
@@ -53,27 +53,34 @@ impl Solution {
     // }
 
     pub fn count_nodes(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
-        if root.is_none() { return 0; }
+        if root.is_none() {
+            return 0;
+        }
         let root = root.unwrap();
         (match (root.borrow().left.clone(), root.borrow().right.clone()) {
             (Some(left), Some(right)) => {
                 let mut ldepth = 1;
                 let mut rdepth = 1;
-                let mut l= left.clone();
+                let mut l = left.clone();
                 let mut r = right.clone();
-                while let Some(ll) = l.clone().borrow().left.clone() { l = ll; ldepth += 1; }
-                while let Some(rr) = r.clone().borrow().right.clone() { r = rr; rdepth += 1; }
+                while let Some(ll) = l.clone().borrow().left.clone() {
+                    l = ll;
+                    ldepth += 1;
+                }
+                while let Some(rr) = r.clone().borrow().right.clone() {
+                    r = rr;
+                    rdepth += 1;
+                }
                 if ldepth == rdepth {
                     2 * (2_i32.pow(ldepth) - 1)
                 } else {
                     Self::count_nodes(Some(left)) + Self::count_nodes(Some(right))
                 }
-            },
+            }
             (Some(l), None) => Self::count_nodes(Some(l)),
             (None, Some(r)) => Self::count_nodes(Some(r)),
-            (None, None) => 0
+            (None, None) => 0,
         }) + 1
     }
 }
 // @lc code=end
-

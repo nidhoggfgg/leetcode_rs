@@ -14,11 +14,11 @@ impl Solution {
         let mut j = 0;
         let len1 = nums1.len();
         let len2 = nums2.len();
-        while i<len1 && j<len2 {
+        while i < len1 && j < len2 {
             match nums1[i].cmp(&nums2[j]) {
-                Less => i+=1,
+                Less => i += 1,
                 Equal => return nums1[i],
-                Greater => j+=1,
+                Greater => j += 1,
             }
         }
 
@@ -26,4 +26,3 @@ impl Solution {
     }
 }
 // @lc code=end
-

@@ -1,4 +1,3 @@
-
 /*
  * @lc app=leetcode.cn id=1 lang=rust
  *
@@ -25,4 +24,3 @@ impl Solution {
     }
 }
 // @lc code=end
-

@@ -19,7 +19,7 @@ impl Solution {
                         "-" => l - r,
                         "*" => l * r,
                         "/" => l / r,
-                        _ => unreachable!()
+                        _ => unreachable!(),
                     };
                     nums_stack.push(v);
                 }
@@ -30,4 +30,3 @@ impl Solution {
     }
 }
 // @lc code=end
-

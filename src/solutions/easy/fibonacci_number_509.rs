@@ -1,4 +1,3 @@
-
 /*
  * @lc app=leetcode.cn id=509 lang=rust
  *
@@ -12,9 +11,12 @@ impl Solution {
     pub fn fib(mut n: i32) -> i32 {
         let mut now = 1;
         let mut last = 0;
-        while n > 0 {last += now;swap(&mut last, &mut now);n-=1;}
+        while n > 0 {
+            last += now;
+            swap(&mut last, &mut now);
+            n -= 1;
+        }
         last
     }
 }
 // @lc code=end
-

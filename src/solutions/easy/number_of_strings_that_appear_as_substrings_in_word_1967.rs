@@ -143,7 +143,7 @@ mod tests {
     use super::*;
 
     fn vstoowned(input: Vec<&str>) -> Vec<String> {
-        input.into_iter().map(|x|x.to_owned()).collect()
+        input.into_iter().map(|x| x.to_owned()).collect()
     }
 
     #[test]
@@ -154,4 +154,3 @@ mod tests {
         assert_eq!(Solution::num_of_strings(patterns, word), 3);
     }
 }
-

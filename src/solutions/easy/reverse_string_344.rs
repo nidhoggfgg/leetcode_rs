@@ -10,7 +10,7 @@ impl Solution {
     pub fn reverse_string(s: &mut Vec<char>) {
         let len = s.len();
         let mut left = 0;
-        let mut right = len-1;
+        let mut right = len - 1;
         while left < right {
             (s[left], s[right]) = (s[right], s[left]);
             left += 1;
@@ -19,4 +19,3 @@ impl Solution {
     }
 }
 // @lc code=end
-

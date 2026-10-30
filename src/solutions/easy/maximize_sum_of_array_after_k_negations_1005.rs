@@ -19,11 +19,14 @@ impl Solution {
             } else {
                 break;
             }
-            i+=1;
+            i += 1;
         }
-        if k%2==1 {
-            if i==len||(i>0&&nums[i-1]<nums[i]){nums[i-1]=-nums[i-1];}
-            else {nums[i]=-nums[i];}
+        if k % 2 == 1 {
+            if i == len || (i > 0 && nums[i - 1] < nums[i]) {
+                nums[i - 1] = -nums[i - 1];
+            } else {
+                nums[i] = -nums[i];
+            }
         }
         nums.iter().sum()
     }

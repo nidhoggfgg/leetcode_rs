@@ -20,10 +20,10 @@ impl Solution {
                 start += x[0] - now;
                 now += x[0] - now;
             }
-            
+
             now -= x[0]
         }
-        
+
         start
     }
 }
@@ -35,7 +35,7 @@ mod tests {
 
     #[test]
     fn test_1() {
-        let input = vec![[1,3],[2,4],[10,11],[10,12],[8,9]];
+        let input = vec![[1, 3], [2, 4], [10, 11], [10, 12], [8, 9]];
         let input = input.iter().map(|x| x.to_vec()).collect();
         assert_eq!(Solution::minimum_effort(input), 32);
     }

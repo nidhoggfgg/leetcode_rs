@@ -14,13 +14,16 @@ impl Solution {
         let len = s.len();
         let mut result = 0;
         for x in g {
-            while i<len && s[i]<x { i+=1; }
-            if i >= len { break; }
-            result+=1;
-            i+=1;
+            while i < len && s[i] < x {
+                i += 1;
+            }
+            if i >= len {
+                break;
+            }
+            result += 1;
+            i += 1;
         }
         result
     }
 }
 // @lc code=end
-

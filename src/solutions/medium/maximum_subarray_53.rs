@@ -20,16 +20,17 @@ impl Solution {
         let mut result = prefix_sum[0];
         for x in prefix_sum {
             if min < 0 {
-                result = result.max(x-min);
+                result = result.max(x - min);
             } else {
                 result = result.max(x);
             }
 
-            if x < min { min = x; }
+            if x < min {
+                min = x;
+            }
         }
 
         result
     }
 }
 // @lc code=end
-

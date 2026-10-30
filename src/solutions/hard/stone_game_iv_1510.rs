@@ -9,9 +9,7 @@ pub struct Solution;
 impl Solution {
     pub fn winner_square_game(n: i32) -> bool {
         let max_squre = (n as f64).sqrt() as usize;
-        let first_n_squres = (1..=max_squre)
-            .map(|x| (x * x))
-            .collect::<Vec<_>>();
+        let first_n_squres = (1..=max_squre).map(|x| x * x).collect::<Vec<_>>();
         let mut dp = (0..=n).map(|_| false).collect::<Vec<_>>();
 
         for x in 1..=n as usize {

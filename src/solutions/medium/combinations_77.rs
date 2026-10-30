@@ -27,7 +27,7 @@ impl Solution {
     // }
 
     pub fn combine(n: i32, k: i32) -> Vec<Vec<i32>> {
-        let mut result = Vec::with_capacity((n*k)as usize);
+        let mut result = Vec::with_capacity((n * k) as usize);
         let mut path: Vec<i32> = (1..=k).collect();
         let k = k as usize;
         loop {
@@ -36,14 +36,19 @@ impl Solution {
             while i > 0 {
                 i -= 1;
                 let max_value = n - k as i32 + i as i32 + 1;
-                if path[i] < max_value { break; }
+                if path[i] < max_value {
+                    break;
+                }
             }
-            if path[i] == n - k as i32 + i as i32 + 1 { break; }
+            if path[i] == n - k as i32 + i as i32 + 1 {
+                break;
+            }
             path[i] += 1;
-            for j in i + 1..k { path[j] = path[j - 1] + 1; }
+            for j in i + 1..k {
+                path[j] = path[j - 1] + 1;
+            }
         }
         result
     }
 }
 // @lc code=end
-

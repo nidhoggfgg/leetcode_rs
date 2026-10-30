@@ -43,15 +43,19 @@ impl Solution {
     ) -> i32 {
         let mut result = i32::MAX;
         let minland = zip(&land_start_time, &land_duration)
-            .map(|(t, d)| t+d).min().unwrap();
+            .map(|(t, d)| t + d)
+            .min()
+            .unwrap();
         for (t, d) in zip(&water_start_time, &water_duration) {
-            result=result.min(if *t>minland{t+d}else{minland+d});
+            result = result.min(if *t > minland { t + d } else { minland + d });
         }
 
         let minwater = zip(&water_start_time, &water_duration)
-            .map(|(t,d)|t+d).min().unwrap();
-        for (t,d) in zip(&land_start_time,&land_duration){
-            result=result.min(if *t>minwater{t+d}else{minwater+d});
+            .map(|(t, d)| t + d)
+            .min()
+            .unwrap();
+        for (t, d) in zip(&land_start_time, &land_duration) {
+            result = result.min(if *t > minwater { t + d } else { minwater + d });
         }
 
         result

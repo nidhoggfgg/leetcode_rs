@@ -11,11 +11,17 @@ impl Solution {
     pub fn search_range(nums: Vec<i32>, target: i32) -> Vec<i32> {
         let len = nums.len();
         let x = Self::binary_search(&nums, target, 0, len);
-        if x == -1 { return vec![-1, -1] }
+        if x == -1 {
+            return vec![-1, -1];
+        }
         let mut left = x as usize;
         let mut right = x as usize;
-        while left > 0 && nums[left-1] == target { left -=1; }
-        while right < len - 1 && nums[right+1] == target { right += 1; }
+        while left > 0 && nums[left - 1] == target {
+            left -= 1;
+        }
+        while right < len - 1 && nums[right + 1] == target {
+            right += 1;
+        }
         vec![left as i32, right as i32]
     }
 
@@ -33,4 +39,3 @@ impl Solution {
     }
 }
 // @lc code=end
-
